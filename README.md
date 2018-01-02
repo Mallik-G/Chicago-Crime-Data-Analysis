@@ -9,7 +9,7 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 
 *There were 594681 cases with no mention of community numbers so they are excluded from the analysis*
 
-#### Top 10 communities with most crime 
+#### Top 10 communities with most crime [Code Link](https://github.com/varunu28/Chicago-Crime-Data-Analysis/blob/caa1436f5dcd78ed5ead15315b487fef36339459/src/main/scala/Analysis.scala)
 | Community Code        | Community Name           | Crime Numbers  |
 | ------------- |:-------------:| -----:|
 |25 | Austin | 368568|
@@ -23,7 +23,7 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 |68 | Englewood | 152333|
 |49 | Roseland | 149107|
 
-#### Top 10 communities with least crime
+#### Top 10 communities with least crime [Code Link](https://github.com/varunu28/Chicago-Crime-Data-Analysis/blob/616d9158e4161caa2afa06e592de2e7820e6f998/src/main/scala/Analysis.scala)
 | Community Code        | Community Name           | Crime Numbers  |
 | ------------- |:-------------:| -----:|
 |47 | Burnside  | 8525|
@@ -37,21 +37,21 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 |37 | Fuller Park | 19693|
 |72 | Beverly | 20673|
 
-#### Top 3 Crime Types
+#### Top 3 Crime Types [Code Link](https://github.com/varunu28/Chicago-Crime-Data-Analysis/blob/588cf5299fa858e4818601e097250fab26bf7d7c/src/main/scala/Analysis.scala)
 | Crime Type        | Percentage (%)          |
 | ------------- |:-------------:| 
 | THEFT | 20.91 |
 | BATTERY | 18.25 |
 | CRIMINAL DAMAGE | 11.47 |
 
-#### What months do criminal like?
+#### What months do criminal like? [Code Link](https://github.com/varunu28/Chicago-Crime-Data-Analysis/blob/0b3d4be8c04d4a2dce34e798ddb3be32f67b7dda/src/main/scala/Analysis.scala)
 | Month Number | Number of cases  | Percentage (%) |
 | ------------- |:-------------:| :-------------:| 
 | 7 | 605183 | 9.3 |
 | 8 | 598999 | 9.2 |
 | 5 | 578254 | 8.88 |
 
-#### What months have lower criminal activities?
+#### What months have lower criminal activities? [Code Link](https://github.com/varunu28/Chicago-Crime-Data-Analysis/blob/e09e49f642c9be40138f6268623898843a6a5ced/src/main/scala/Analysis.scala)
 | Month Number | Number of cases  | Percentage (%) |
 | ------------- |:-------------:| :-------------:| 
 | 2 | 446463 | 6.86 |
