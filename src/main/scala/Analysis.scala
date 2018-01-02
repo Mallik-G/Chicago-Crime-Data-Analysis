@@ -42,11 +42,19 @@ object Analysis {
       foreach(println)*/
 
     // What months do criminal like?
-    data.
+    /*data.
       map(rec => (rec.split(",")(2).split(" ")(0).split("/")(0).toInt, 1)).
       reduceByKey(_+_).
       map(rec => (rec._1,rec._2,BigDecimal((rec._2.toDouble/6508475)*100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble)).
       takeOrdered(3)(Ordering[Double].reverse.on(x=>x._2)).
+      foreach(println)*/
+
+    // What months have lower criminal activities?
+    data.
+      map(rec => (rec.split(",")(2).split(" ")(0).split("/")(0).toInt, 1)).
+      reduceByKey(_+_).
+      map(rec => (rec._1,rec._2,BigDecimal((rec._2.toDouble/6508475)*100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble)).
+      takeOrdered(3)(Ordering[Double].on(x=>x._2)).
       foreach(println)
 
   }

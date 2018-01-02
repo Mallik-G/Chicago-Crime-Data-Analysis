@@ -1,10 +1,10 @@
 # Chicago-Crime-Data-Analysis
-An analysis of Chicago crime data using Apache Spark. The data can be pulled from the [Chicago Crime Data Link](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2)
+An analysis of Chicago crime data using Apache Spark. The data can be pulled from the [Chicago Crime Data Link](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2). A link to code for analysis is present with every result(Please refer the uncommented code)
 
 #### Technologies Used
  - Scala
  - Spark Core APIs
- 
+
 ## Questions Answered about data
 
 *There were 594681 cases with no mention of community numbers so they are excluded from the analysis*
@@ -52,6 +52,13 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 | 5 | 578254 | 8.88 |
 
 #### What months have lower criminal activities?
+| Month Number | Number of cases  | Percentage (%) |
+| ------------- |:-------------:| :-------------:| 
+| 2 | 446463 | 6.86 |
+| 12 | 478061 | 7.35 |
+| 1 | 507500 | 7.8 |
+
+*Seeing the above results, we see a pattern that criminals have preferred warmer months to colder months such as Dec for their activities*
 
 #### What is the most unsafe time to be in the streets?
 
