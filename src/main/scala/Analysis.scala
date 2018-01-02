@@ -18,14 +18,14 @@ object Analysis {
 
     // println(casesWithNoCommunity) (594681)
 
-    // Top 10 communities with most crime
+    // Top 10 communities with most/least crime
     data.
       filter(rec => rec.split(",")(13) != "").
       map(rec => (rec.split(",")(13), 1)).
       reduceByKey(_ + _, 1).
       join(communityCodesData).
       map(item => (item._2._1.toInt, (item._1,item._2._2))).
-      takeOrdered(10)(Ordering[Int].reverse.on(x=>x._1)).
+      takeOrdered(10)(Ordering[Int].on(x=>x._1)).
       foreach(println)
 
   }

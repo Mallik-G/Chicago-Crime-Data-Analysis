@@ -7,7 +7,9 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
  
 ## Questions Answered about data
 
-#### Top 10 communities with most crime
+*There were 594681 cases with no mention of community numbers so they are excluded from the analysis*
+
+#### Top 10 communities with most crime 
 | Community Code        | Community Name           | Crime Numbers  |
 | ------------- |:-------------:| -----:|
 |25 | Austin | 368568|
@@ -22,6 +24,18 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 |49 | Roseland | 149107|
 
 #### Top 10 communities with least crime
+| Community Code        | Community Name           | Crime Numbers  |
+| ------------- |:-------------:| -----:|
+|47 | Burnside  | 8525|
+|12 | Forest Glen | 10414|
+|74 | Mount Greenwood | 12113|
+|55 | Hegewisch | 12433|
+|36 | Oakland | 12672|
+|18 | Montclare | 13842|
+|13 | North Park | 18322|
+|57 | Archer Heights | 19661|
+|37 | Fuller Park | 19693|
+|72 | Beverly | 20673|
 
 #### Top Crime Types
 
