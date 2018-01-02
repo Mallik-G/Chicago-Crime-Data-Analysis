@@ -37,7 +37,12 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 |37 | Fuller Park | 19693|
 |72 | Beverly | 20673|
 
-#### Top Crime Types
+#### Top 3 Crime Types
+| Crime Type        | Percentage (%)          |
+| ------------- |:-------------:| 
+| THEFT | 20.91 |
+| BATTERY | 18.25 |
+| CRIMINAL DAMAGE | 11.47 |
 
 #### What months do criminal like?
 
