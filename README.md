@@ -45,6 +45,11 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 | CRIMINAL DAMAGE | 11.47 |
 
 #### What months do criminal like?
+| Month Number | Number of cases  | Percentage (%) |
+| ------------- |:-------------:| 
+| 7 | 605183 | 9.3 |
+| 8 | 598999 | 9.2 |
+| 5 | 578254 | 8.88 |
 
 #### What months have lower criminal activities?
 

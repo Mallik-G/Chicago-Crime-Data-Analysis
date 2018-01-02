@@ -34,10 +34,18 @@ object Analysis {
       foreach(println)*/
 
     // Top Crime Types
-    data.
+    /*data.
       map(rec => (rec.split(",")(5),1)).
       reduceByKey(_ + _, 4).
       map(rec => (rec._1, BigDecimal((rec._2.toDouble/6508475)*100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble)).
+      takeOrdered(3)(Ordering[Double].reverse.on(x=>x._2)).
+      foreach(println)*/
+
+    // What months do criminal like?
+    data.
+      map(rec => (rec.split(",")(2).split(" ")(0).split("/")(0).toInt, 1)).
+      reduceByKey(_+_).
+      map(rec => (rec._1,rec._2,BigDecimal((rec._2.toDouble/6508475)*100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble)).
       takeOrdered(3)(Ordering[Double].reverse.on(x=>x._2)).
       foreach(println)
 
