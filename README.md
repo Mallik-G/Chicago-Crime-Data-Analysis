@@ -61,6 +61,15 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 *Seeing the above results, we see a pattern that criminals have preferred warmer months to colder months such as Dec for their activities*
 
 #### What is the most unsafe time to be in the streets?
+| Time | Number of cases  | Percentage(%)  |
+| ------------- |:-------------:| :-------------:|
+| 08 PM | 371513 | 5.71 |
+| 07 PM | 370697 | 5.7  |
+| 12 PM | 369403 | 5.68 |
+| 09 PM | 363716 | 5.59 |
+| 12 AM | 361560 | 5.56 |
+
+#### What is the most safe time to be in the streets?
 
 #### Which is the most unsafe street
 
