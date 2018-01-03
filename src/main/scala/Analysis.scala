@@ -58,6 +58,15 @@ object Analysis {
       foreach(println)*/
 
     // What is the most unsafe time to be in the streets?
+    /*data.
+      map(rec => rec.split(",")).
+      map(rec => (rec(2).split(" ")(1).split(":")(0) + " " + rec(2).split(" ")(2), 1)).
+      reduceByKey(_+_).
+      takeOrdered(5)(Ordering[Int].reverse.on(x=>x._2)).
+      map(rec => (rec._1, rec._2, BigDecimal((rec._2.toDouble/6508475)*100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble)).
+      foreach(println)*/
+
+    // What is the most safe time to be in the streets?
     data.
       map(rec => rec.split(",")).
       map(rec => (rec(2).split(" ")(1).split(":")(0) + " " + rec(2).split(" ")(2), 1)).
