@@ -80,7 +80,7 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 
 *So according to the data, while your morning walk will be pleasant and safe, you need to be careful when you leave your office in the evening or return back home after a drink at the local bar*
 
-#### Which is the most unsafe street (100XX W OHARE ST with 14952 cases)
+#### Which is the most unsafe street (100XX W OHARE ST with 14952 cases) [Code Link](https://github.com/varunu28/Chicago-Crime-Data-Analysis/blob/53ad78871cd9341e7bd22205395b29071e432344/src/main/scala/Analysis.scala)
 | Crime Type | Number of cases  | Percentage(%)    |
 | ------------- |:-------------:| :-------------:|
 | THEFT | 5237 | 35.03 |
@@ -92,7 +92,10 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 | CRIMINAL DAMAGE | 812 | 5.43 |
 | MOTOR VEHICLE THEFT | 455 | 3.04 |
 
-#### Which is the most safe street
+#### Which is the most safe street ( 027XX E 126TH ST with 1 case)
+| Crime Type | Number of cases  | Percentage(%)    |
+| ------------- |:-------------:| :-------------:|
+| CRIMINAL DAMAGE | 1 | 100.0 |
 
 #### Is Chicago PD doing a good job?
 

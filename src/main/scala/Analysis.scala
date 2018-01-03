@@ -78,7 +78,7 @@ object Analysis {
       foreach(println)*/
 
     // Which is the most unsafe street
-    val mostUnsafeStreetData = data.
+    /*val mostUnsafeStreetData = data.
                               map(rec => rec.split(",")).
                               map(rec => (rec(3), 1)).
                               reduceByKey(_+_).
@@ -98,8 +98,31 @@ object Analysis {
       sortByKey(false).
       map(rec => (rec._2, rec._1, BigDecimal((rec._1.toDouble/mostUnsafeStreetCaseCount)*100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble)).
       collect().
-      foreach(println)
+      foreach(println)*/
 
+
+    // Which is the most safe street
+    val mostSafeStreetData = data.
+      map(rec => rec.split(",")).
+      map(rec => (rec(3), 1)).
+      reduceByKey(_+_).
+      takeOrdered(1)(Ordering[Int].on(x=>x._2))
+
+    val mostSafeStreetName = mostSafeStreetData.map(rec => rec._1).mkString("")
+    val mostSafeStreetCaseCount = mostSafeStreetData.map(rec => rec._2).mkString("").toInt
+
+    println(mostSafeStreetName) // 027XX E 126TH ST
+    println(mostSafeStreetCaseCount) // 1
+
+    data.
+      filter(rec => rec.split(",")(3) == mostSafeStreetName).
+      map(rec => (rec.split(",")(5), 1)).
+      reduceByKey(_+_).
+      map(rec => rec.swap).
+      sortByKey(false).
+      map(rec => (rec._2, rec._1, BigDecimal((rec._1.toDouble/mostSafeStreetCaseCount)*100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble)).
+      collect().
+      foreach(println)
 
   }
 }
