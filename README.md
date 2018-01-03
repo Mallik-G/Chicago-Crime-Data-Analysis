@@ -69,7 +69,7 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 | 09 PM | 363716 | 5.59 |
 | 12 AM | 361560 | 5.56 |
 
-#### What is the most safe time to be in the streets?
+#### What is the most safe time to be in the streets? [Code Link](https://github.com/varunu28/Chicago-Crime-Data-Analysis/blob/8c9ccb8d3b0aba3bb4e98ec06252af8b26b567fb/src/main/scala/Analysis.scala)
 | Time | Number of cases  | Percentage(%)   |
 | ------------- |:-------------:| :-------------:|
 | 05 AM | 86597 | 1.33 |
@@ -80,7 +80,17 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 
 *So according to the data, while your morning walk will be pleasant and safe, you need to be careful when you leave your office in the evening or return back home after a drink at the local bar*
 
-#### Which is the most unsafe street
+#### Which is the most unsafe street (100XX W OHARE ST with 14952 cases)
+| Crime Type | Number of cases  | Percentage(%)    |
+| ------------- |:-------------:| :-------------:|
+| THEFT | 5237 | 35.03 |
+| OTHER OFFENSE | 2568 | 17.17 |
+| CRIMINAL TRESPASS | 1811 | 12.11 |
+| DECEPTIVE PRACTICE | 1386 | 9.27 |
+| BATTERY | 931 | 6.23 |
+| NARCOTICS | 853 | 5.7 |
+| CRIMINAL DAMAGE | 812 | 5.43 |
+| MOTOR VEHICLE THEFT | 455 | 3.04 |
 
 #### Which is the most safe street
 

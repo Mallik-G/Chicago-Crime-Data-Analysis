@@ -10,6 +10,8 @@ object Analysis {
   def main(args: Array[String]): Unit = {
 
     val data = sc.textFile("data/CrimeDataWithoutHeader.csv")
+    data.cache()
+
     /*val communityCodesData = sc.textFile("data/CommunityCodes.csv").
                                 map(rec => (rec.split(",")(0), rec.split(",")(1)))
 */
@@ -67,12 +69,37 @@ object Analysis {
       foreach(println)*/
 
     // What is the most safe time to be in the streets?
-    data.
+    /*data.
       map(rec => rec.split(",")).
       map(rec => (rec(2).split(" ")(1).split(":")(0) + " " + rec(2).split(" ")(2), 1)).
       reduceByKey(_+_).
       takeOrdered(5)(Ordering[Int].reverse.on(x=>x._2)).
       map(rec => (rec._1, rec._2, BigDecimal((rec._2.toDouble/6508475)*100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble)).
+      foreach(println)*/
+
+    // Which is the most unsafe street
+    val mostUnsafeStreetData = data.
+                              map(rec => rec.split(",")).
+                              map(rec => (rec(3), 1)).
+                              reduceByKey(_+_).
+                              takeOrdered(1)(Ordering[Int].reverse.on(x=>x._2))
+
+    val mostUnsafeStreetName = mostUnsafeStreetData.map(rec => rec._1).mkString("")
+    val mostUnsafeStreetCaseCount = mostUnsafeStreetData.map(rec => rec._2).mkString("").toInt
+
+    println(mostUnsafeStreetName) // 100XX W OHARE ST
+    println(mostUnsafeStreetCaseCount) // 14952
+
+    data.
+      filter(rec => rec.split(",")(3) == mostUnsafeStreetName).
+      map(rec => (rec.split(",")(5), 1)).
+      reduceByKey(_+_).
+      map(rec => rec.swap).
+      sortByKey(false).
+      map(rec => (rec._2, rec._1, BigDecimal((rec._1.toDouble/mostUnsafeStreetCaseCount)*100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble)).
+      collect().
       foreach(println)
+
+
   }
 }
