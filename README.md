@@ -4,9 +4,6 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 #### Technologies Used
  - Scala
  - Spark Core APIs
- 
-#### Challenge Faced
-While analysing the data, I found that there were records where 
 
 ## Questions Answered about data
 
