@@ -100,7 +100,7 @@ While analysing the data, I found that there were records where
 | ------------- |:-------------:| :-------------:|
 | CRIMINAL DAMAGE | 1 | 100.0 |
 
-#### Is Chicago PD doing a good job?
+#### Is Chicago PD doing a good job? [Code Link](https://github.com/varunu28/Chicago-Crime-Data-Analysis/blob/1ec76e370e24fa5acd9636a2a1fdf10728fee34f/src/main/scala/Analysis.scala)
 | Arrest Done | Number of cases  | Percentage(%)    |
 | ------------- |:-------------:| :-------------:|
 | No | 4519824 | 71.9 |
@@ -108,4 +108,6 @@ While analysing the data, I found that there were records where
 
 *Going by the numbers, we see that arrest was done on a very small percentage of criminal cases*
 
-#### Is there any safe area left?
+## Contributions
+
+Open an issue for more questions which you think can be answered through this data and raise a PR if you find any bugs/improvements in the code
