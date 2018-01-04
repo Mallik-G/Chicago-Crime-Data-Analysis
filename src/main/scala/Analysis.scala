@@ -102,7 +102,7 @@ object Analysis {
 
 
     // Which is the most safe street
-    val mostSafeStreetData = data.
+    /*val mostSafeStreetData = data.
       map(rec => rec.split(",")).
       map(rec => (rec(3), 1)).
       reduceByKey(_+_).
@@ -122,7 +122,19 @@ object Analysis {
       sortByKey(false).
       map(rec => (rec._2, rec._1, BigDecimal((rec._1.toDouble/mostSafeStreetCaseCount)*100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble)).
       collect().
-      foreach(println)
+      foreach(println)*/
 
+    // Is Chicago PD doing a good job?
+    val dataFiltered = data.
+                      map(rec => rec.split(",")).
+                      filter(rec => rec(8) == "true" || rec(8) == "false")
+
+    val dataFilteredCount = dataFiltered.count()
+
+    dataFiltered.
+      map(rec => (rec(8), 1)).
+      reduceByKey(_+_).
+      map(rec => (rec._1, rec._2, BigDecimal((rec._2.toDouble/dataFilteredCount)*100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble)).
+      collect().foreach(println)
   }
 }

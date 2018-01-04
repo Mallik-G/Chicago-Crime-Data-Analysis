@@ -4,6 +4,9 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 #### Technologies Used
  - Scala
  - Spark Core APIs
+ 
+#### Challenge Faced
+While analysing the data, I found that there were records where 
 
 ## Questions Answered about data
 
@@ -92,11 +95,17 @@ An analysis of Chicago crime data using Apache Spark. The data can be pulled fro
 | CRIMINAL DAMAGE | 812 | 5.43 |
 | MOTOR VEHICLE THEFT | 455 | 3.04 |
 
-#### Which is the most safe street ( 027XX E 126TH ST with 1 case)
+#### Which is the most safe street ( 027XX E 126TH ST with 1 case) [Code Link](https://github.com/varunu28/Chicago-Crime-Data-Analysis/blob/4711a009e5fca2fc1d99701449d71a4ec6dd3f90/src/main/scala/Analysis.scala)
 | Crime Type | Number of cases  | Percentage(%)    |
 | ------------- |:-------------:| :-------------:|
 | CRIMINAL DAMAGE | 1 | 100.0 |
 
 #### Is Chicago PD doing a good job?
+| Arrest Done | Number of cases  | Percentage(%)    |
+| ------------- |:-------------:| :-------------:|
+| No | 4519824 | 71.9 |
+| Yes | 1766253 | 28.1 |
+
+*Going by the numbers, we see that arrest was done on a very small percentage of criminal cases*
 
 #### Is there any safe area left?
